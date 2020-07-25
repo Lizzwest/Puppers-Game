@@ -1,0 +1,51 @@
+*Game Planning*
+I am creating notes here so I don't have to toggle between programs and can plan my game properly.
+!!Project One Details and Requirements
+1. Must Display in browser.
+2. Include javascript, css and html files. (Done)
+3. Keep it simple and dont repeat yourself.(Get it to work and then condense.)
+4.Deploy game online.(will go over in class)
+5.Use semantic markup for html and css ( best practices).
+6.Javascript for DOM manipulation ( dont forget DOM content loaded at top of page).
+7. Game must Work, be built by me, and be hosted on the internet.
+8. A git repo(done), with a *link to hosted game and frequent commits since day one***.
+9. A readme with technology used, approach taken, installation instructions, unsolved problems etc. ( Be descriptive.)
+  *Tips to start*
+  1. Break it down. (data, presentation, views, style, DOM manipulation).
+  2. Use dev tools ( console.log everything!!, inspector,alert statements, catch for fetch, etc) to debug.
+  3.DON'T PROCRSTINATE. Work multiple times a day. A lot of this is going to be planning. Keep planning daily and code whenerv you have something to add or try.
+  4.Commit, commit, commit.
+  4. Use MDN, W3schools etc to understand what I am doing.
+  5. Write all the code out. You can always take it out later, but get it down there and clean up when in a spot to. Use temp elements
+  that trigger events if data is not available. Example: create a button to simulate text displayed on win, if you havn't finished win function.
+    ##Evaluation
+    1. Did you commit? Don't forget to commit!!!
+    2. Did you plan it out? Did you make it work before you made it pretty? (Use filler squares before diving into the dog aspect. Just make checkers. That is my goal.)
+    3. Did you meet all requirements above? Given info covered, was it complex?(Yes keep it simple, but you know you can make it better than simple. Look back at canvas crawler and tic tac toe when feeling stuck.) 
+    4. Is it creative? ( This is the fun design part. Lean into it. Make it cute but clean.)
+    5.Did you follow code style guidance( declare variables at top, use DOM content loaded, proper indentation, semantic naming, modularity)
+    6. Did you comment your code? (Keep file of failed attempted code, as well as comments in final code. Even if the code failed, you can reference it to try to expand on it or remind you what DIDN'T work)
+    7.Did you deploy it?( A public URL using github pages*(look this up)).
+        ^^Grading Rubric
+        -0 incomplete
+        -1 Does not meet expectations.
+        -2 Meets expectations, good job!
+        -3 Exceeds expectations 🥳.
+
+
+        *Prep work*
+        What do I need to create checkers? (Puppers)
+        1. A game board (64 squares) (divs?, grid?, canvas? table? something else? Think the whole set up through before you commit to one you may not be able to get through.)
+        2. 2 player variables(const players)
+        3.A function allowing each players pieces to move && to *switch turns between player.(switch)
+        4. A function that allows for multiple jumps in the event of multiple captures.(play off capture function. SOmething like if capture = true and adjacent box equals opposite playe, allow another capture. Maybe not that exactly, but the concept seems solid.)
+        5. A function to detect a winner (and a lose lose game? can that happen? I don't think so but I am going to verify.) and Display who won ***.(checkForVictory, if else tie, modal.innerhtml display string plus player variable won)
+        6. A function to *allow* for captures and to remove the piece from play.(wrap 4 in this. Start with twom separate functions for capture and remove until you can figure out how to combine them. Think logic from tic tac toe of boxesAreClickable and boxClicked)
+        7. A function to reset(button) the board(not the page).(you have done this before)
+        8. A game loop to play through.( look back on notes from canvas crawler)
+        9. How do the pieces work in check? The have a few different states(pieces move once diagonally adjacent on first move or whenever they are not jumping a piece. The move a min of two diagonal spaces when capturing (the dont technically land in the space of the captured piece, but they are moving two boxes min diagonally away. Make sure you expand on this detail))
+        10. Pieces can ONLY move diagonally. Shade the gameboard in two seperate colors(or tones) and only allow pieces to move on those pieces. ( make a function)
+        11. Once a player is king( reaches opponents side of gameboard) it can move forward OR backward diagonally. (maybe a boolean using or? play off of move function)
+        12.Win function happens when one player removes all opponents pieces from the board. 
+
+        //What am I missing? Will continue to add to this as I discover elements that will be necessary.

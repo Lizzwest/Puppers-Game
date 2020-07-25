@@ -1,2 +1,4 @@
 # Puppers-Game
-This is my Puppers(Checkers) Repo. SEI 7/13 Project 1
+This is my Puppers(Checkers) Repo. SEI 7/13     Project 1.
+
+
