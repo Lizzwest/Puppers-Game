@@ -2,9 +2,24 @@ console.log("my files are connected")
 
 
 document.addEventListener("DOMContentLoaded",
-  function(){
-      const player1= "dog"
-      const player2= "pup"
+  function(){//declare all variables at the top to clean up code
+      
+    const player1= "dog"
+    const player2= "pup"
+    const boxes = document.querySelector("td")
+    let pupPieces= document.getElementsByClassName(".pupPiece")
+    let dogPieces = document.getElementsByClassName(".dogPiece")
+    let pupActivePieces = 12
+    let goActivePieces = 12
+    const gameboard = 
+    [null, 1, null, 2, null, 3, null, 4, null, 5, null, 
+        6, null, 7, null, 8, null, 9, null, 10, null, 11, 
+        null, 12, null, null, null, null, null, null, null, 
+        null, null, null, null, null, null, null, null, null, 
+        13, null, 14, null, 15, null, 16, null, 17, null, 18, 
+        null, 19, null, 20, null, 21, null, 22, null, 23, null, 24, null ]
+    
+    
 
 
 

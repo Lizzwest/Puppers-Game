@@ -64,3 +64,21 @@ Let's check out our updated *table* below.
 
         </table>
 ```
+
+And voila! A gameboard! I threw in some basic CSS to show what our html looks like printed on a screen. It is not centered or the appropriate size yet, but that will come later. Right now, we are going to focus on making our game work! And that means... it's time for JavaScript!
+
+## The gameboard
+
+Now, we know what the gameboard looks like, but JavaScript needs to *also* have a representation of the gameboard. Otherwise, our game won't work! So let's recreate that gameboard using an array.
+
+```javascript
+const gameboard = 
+    [null, 1, null, 2, null, 3, null, 4, null, 5, null, 
+        6, null, 7, null, 8, null, 9, null, 10, null, 11, 
+        null, 12, null, null, null, null, null, null, null, 
+        null, null, null, null, null, null, null, null, null, 
+        13, null, 14, null, 15, null, 16, null, 17, null, 18, 
+        null, 19, null, 20, null, 21, null, 22, null, 23, null, 24, null ]
+```
+
+Here, we have a visual representation for JavaScript of what our gameboard looks like(and, subsequently, what it can do.) I am using *null* to signify my #void spaces, so that JavaScript understands we do not want to do anything with those boxes on the board.

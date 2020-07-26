@@ -43,9 +43,9 @@ I am creating notes here so I don't have to toggle between programs and can plan
         6. A function to *allow* for captures and to remove the piece from play.(wrap 4 in this. Start with twom separate functions for capture and remove until you can figure out how to combine them. Think logic from tic tac toe of boxesAreClickable and boxClicked)
         7. A function to reset(button) the board(not the page).(you have done this before)
         8. A game loop to play through.( look back on notes from canvas crawler)
-        9. How do the pieces work in check? The have a few different states(pieces move once diagonally adjacent on first move or whenever they are not jumping a piece. The move a min of two diagonal spaces when capturing (the dont technically land in the space of the captured piece, but they are moving two boxes min diagonally away. Make sure you expand on this detail))
-        10. Pieces can ONLY move diagonally. Shade the gameboard in two seperate colors(or tones) and only allow pieces to move on those pieces. ( make a function)
-        11. Once a player is king( reaches opponents side of gameboard) it can move forward OR backward diagonally. (maybe a boolean using or? play off of move function)
+        9. How do the pieces work in checkers? The have a few different states(pieces move once diagonally adjacent on first move or whenever they are not jumping a piece. They move a min of two diagonal spaces when capturing (the dont technically land in the space of the captured piece, but they are moving two boxes min diagonally away. Make sure you expand on this detail))
+        10. Pieces can ONLY move diagonally. Shade the gameboard in two seperate colors(or tones)((done)) and only allow pieces to move on those pieces. ( make a function)
+        11. Once a player is king( reaches opponents side of gameboard) it can move forward OR backward diagonally. (maybe a boolean using or? play off of move function)(looks like i will define this in Javascript, doesn't seem like an html issue)
         12.Win function happens when one player removes all opponents pieces from the board. 
 
         //What am I missing? Will continue to add to this as I discover elements that will be necessary.
