@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded",
   function(){
       const player1= "dog"
       const player2= "pup"
-      
 
 
 
@@ -23,4 +22,5 @@ document.addEventListener("DOMContentLoaded",
 
 
 
-  }
+
+  })

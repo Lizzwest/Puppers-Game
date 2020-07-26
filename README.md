@@ -37,4 +37,4 @@ As you can see, I have 8 rows, with 8 sections of *table data* in each row, to r
 
 ## What exactly can our pieces do in checkers?
 
-Pieces in checkers can only move *diagonally*. So we have to make sure we include a function that will prevent our paces from moving straight forward or straight back. We will get to that in our JavaScript. But, within our HTML, we can create a *class* or an *ID* for the squares that will *never* have a piece in them. After all, we are only moving *diagonally*, right? Let's add that in now. I am going to be using an *ID* to define my squares that cannot have pieces in them.
+Pieces in checkers can only move *diagonally*. So we have to make sure we include a function that will prevent our paces from moving straight forward or straight back. We will get to that in our JavaScript. But, within our HTML, we can create a *class* or an *ID* for the squares that will *never* have a piece in them. After all, we are only moving *diagonally*, right? Let's add that in now. I am going to be using an *ID* to define my squares that cannot have pieces in them. The *ID* should alternate squares, creating the *void* space.
