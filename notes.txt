@@ -35,7 +35,7 @@ I am creating notes here so I don't have to toggle between programs and can plan
 
         *Prep work*
         What do I need to create checkers? (Puppers)
-        1. A game board (64 squares) (divs?, grid?, canvas? table? something else? Think the whole set up through before you commit to one you may not be able to get through.)
+        1. A game board (64 squares) (divs?, grid?, canvas? table? something else? Think the whole set up through before you commit to one you may not be able to get through.)(let's go with table. The setup is the most intuitive for a gameboard)
         2. 2 player variables(const players)
         3.A function allowing each players pieces to move && to *switch turns between player.(switch)
         4. A function that allows for multiple jumps in the event of multiple captures.(play off capture function. SOmething like if capture = true and adjacent box equals opposite playe, allow another capture. Maybe not that exactly, but the concept seems solid.)
