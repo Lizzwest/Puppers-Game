@@ -22,3 +22,10 @@ td{
 #void{
     background: orange;
 }
+
+.dogPiece{
+    color: orange;
+    height: 60px;
+    width: 60px;
+
+}
