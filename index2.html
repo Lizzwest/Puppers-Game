@@ -1,0 +1,79 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .grid{height:500px; width: 500px; display:flex; flex-wrap: wrap; border: 5px solid red; }
+    .box{
+        height:calc(100% / 8);
+        width:calc(100% / 8);
+        outline: 1px solid black;
+    
+    }
+    .dark{
+        background-color: antiquewhite;
+    }
+    </style>
+</head>
+<body>
+    <div class="grid" id= "target"></div>
+    <script>
+        var board = []
+        for( var x = 0; x < 8; x++){
+            var row = []
+            for( var y = 0; y < 8; y++){
+                row.push(0)
+            }
+            board.push(row)
+        }
+        board[1][0] = 1
+        console.log(board)
+        drawBoard();
+        function drawBoard(){
+            target.innerHTML = ""
+            var counter = 0
+            board.map(function(row , x){ counter++
+            row.map(function(cell, y){ counter++
+                target.innerHTML += `<div data-x ="${x}" data-y ="${y}" class = "box ${counter % 2 ? "dark" : " "}">${cell}</div>`
+
+            })
+        })
+        }
+        var selected = null
+        target.addEventListener("click", function(e){
+            if(!selected ){
+                selected = e.target
+            }
+            else{
+                var x = e.target.dataset.x
+                var y = e.target.dataset.y
+                
+                var xx = selected.dataset.x
+                var yy =selected.dataset.y
+                if(Math.abs(x-xx)== 1 && Math.abs(y-yy) == 1)
+                {
+                    board[xx][yy] = 0
+                board[x][y] = selected.innerHTML
+                selected = null;
+                drawBoard();
+
+                } else{
+                    selected = e.target
+                }
+                
+            }
+        })
+
+        
+
+        // for(var row = 0; row <board.length; row++){
+        //     for(var cell)
+        // }
+
+
+    </script>
+    
+</body>
+</html> -->

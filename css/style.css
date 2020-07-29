@@ -9,7 +9,7 @@ h1{
 table{
     display: inline-block;
     padding: 60px;
-    margin: 50vw, 50vh;
+    margin: 40vw, 40vh;
 }
 td{
     background: blue;
@@ -28,4 +28,19 @@ td{
     height: 60px;
     width: 60px;
 
+}
+.pupsTurn{
+    color: orange;
+    text-align: center;
+    font-size: large;
+}
+.dogsTurn{
+    color: blue;
+    text-align: center;
+    font-size: larger;
+}
+#separate{
+    color: aquamarine;
+    font-size: xx-large;
+    text-align: center;
 }
