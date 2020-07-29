@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	let currentTurn = true;
 	const pupTurn = document.getElementsByClassName('.pupsTurn');
 	const dogTurn = document.getElementsByClassName('.dogsTurn');
-	const lineBreak = document.querySelector('#separate');
+    const lineBreak = document.querySelector('#separate');
+    let possMove = [ ]
 	const gameboard = [
 		null,
 		1,
@@ -142,7 +143,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			lastClicked = e.target.id;
 			playPieces = pupPieces;
 			console.log('clicked');
-			document.getElementById(lastClicked).removeEventListener('click', getPieces);
+            document.getElementById(lastClicked).removeEventListener('click', getPieces);
+             possMove = []
 			let plus4 = parseInt(lastClicked) + 4;
 			let possMove4 = document.getElementById(plus4);
 			let plus5 = parseInt(lastClicked) + 5;
@@ -150,11 +152,13 @@ document.addEventListener('DOMContentLoaded', function() {
 			let plus7 = parseInt(lastClicked) + 7;
 			let possMove7 = document.getElementById(plus7);
 			let plus9 = parseInt(lastClicked) + 9;
-			let possMove9 = document.getElementById(plus9);
+            let possMove9 = document.getElementById(plus9);
+            possMove.push(possMove4, possMove5, possMove7, possMove9)
 			//if on far right side of board, can only go up 4
 			//if statement add event clicker ONLY if no other dog or pup in spot
 			if (possMove4.innerHTML === '') {
-				possMove4.addEventListener('click', swapSpots);
+                possMove4.addEventListener('click', swapSpots);
+                
 			} else if (possMove4.innerHTML === 'dog') {
 				if ((possMove7.innerHTML = '')) {
 					possMove7.addEventListener('click', swapSpots);
@@ -166,12 +170,15 @@ document.addEventListener('DOMContentLoaded', function() {
 				if ((possMove9.innerHTML = '')) {
 					possMove9.addEventListener('click', swapSpots);
 				}
-			}
+			} for (let i = 0; i < pupPieces.length; i++) {
+                pupPieces[i].removeEventListener('click', getPieces);
+             }   
 		} else {
 			lastClicked = e.target.id;
 			playPieces = pupPieces;
 			console.log('clicked');
-			document.getElementById(lastClicked).removeEventListener('click', getPieces);
+            document.getElementById(lastClicked).removeEventListener('click', getPieces);
+            possMove = []
 			let minus4 = parseInt(lastClicked) - 4;
 			let possMove4 = document.getElementById(minus4);
 			let minus5 = parseInt(lastClicked) - 5;
@@ -179,7 +186,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			let minus7 = parseInt(lastClicked) - 7;
 			let possMove7 = document.getElementById(minus7);
 			let minus9 = parseInt(lastClicked) - 9;
-			let possMove9 = document.getElementById(minus9);
+            let possMove9 = document.getElementById(minus9);
+            possMove.push(possMove4, possMove5, possMove7, possMove9)
 			//if on far right side of board, can only go up 4
 			//if statement add event clicker ONLY if no other dog or pup in spot
 			if (possMove4.innerHTML === '') {
@@ -195,8 +203,14 @@ document.addEventListener('DOMContentLoaded', function() {
 				if ((possMove9.innerHTML = '')) {
 					possMove9.addEventListener('click', swapSpots);
 				}
-			}
-		}
+			}  for(let i = 0; i <dogPieces.length; i++){
+                dogPieces[i].removeEventListener('click', getPieces)
+            }
+        }
+        
+         
+           
+        
 
 		// removeSquareonclick();
 		// resetBoxes();
@@ -207,7 +221,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	function swapSpots(e) {
 		if (currentTurn) {
 			let pupPiece = document.getElementById(e.target.id);
-			pupPiece.innerHTML = 'pup';
+            pupPiece.innerHTML = 'pup';
+            console.log("🦚", lastClicked)
             document.getElementById(lastClicked).innerHTML = '';
             document.getElementById(lastClicked).setAttribute("class","moveable")
             console.log(pupPiece)
@@ -236,5 +251,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			//document.getElementById(lastClicked).addEventListener('click', getPieces);
 			havePiecesListen();
 		}
-	}
+     possMove.forEach(move => {
+        move.removeEventListener("click", swapSpots);
+     })
+    }
 });
